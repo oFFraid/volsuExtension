@@ -1,0 +1,58 @@
+{
+    "name": "Volsu",
+    "version": "1.0",
+    "description": "делает вещи, которые должны были сделать разработчики сайта Волгу",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://m.volsu.ru/mod/forum/*"
+            ],
+            "js": [
+                "./scripts/content/forum.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://m.volsu.ru/my/"
+            ],
+            "js": [
+                "./scripts/content/courses.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://m.volsu.ru/course/*"
+            ],
+            "js": [
+                "./scripts/content/parsePeople.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "./scripts/background/background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "declarativeContent"
+    ],
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon32.png",
+            "128": "icons/icon32.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon32.png",
+        "128": "icons/icon32.png"
+    },
+    "manifest_version": 2
+}

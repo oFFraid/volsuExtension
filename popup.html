@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <title>volsu</title>
+    <script src="./scripts/popup/popup.js"></script>
+    <style>
+        #error {
+            color: red;
+            padding: 2px;
+        }
+
+        #success {
+            color: green;
+            padding: 2px;
+        }
+
+        body {
+            min-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div id="error"></div>
+            <div id="success"></div>
+            <form id="newTextForum">
+                <label for="forum">текст, вставляемый на форуме</label>
+                <input class="u-full-width" type="text" name="forumField" id="forumText">
+                <button type="submit" class="button-primary" id="saveNewText">save</button>
+            </form>
+        </div>
+
+    </body>
+</body>
+
+</html>
